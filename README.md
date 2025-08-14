@@ -1,7 +1,6 @@
-
 # Django + React CRUD Boilerplate
 
-A starter project for building CRUD services with Django (backend) and React (frontend).
+A modern, production-ready boilerplate for building full-stack CRUD applications with Django (backend) and React (frontend). This template features robust automation scripts for rapid project setup, seamless LAN development, and process management. With best practices for security, testing, and developer experience, it’s ideal for both prototyping and scaling real-world web services.
 
 ## Features
 
