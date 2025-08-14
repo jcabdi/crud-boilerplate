@@ -22,7 +22,7 @@ frontend/
 
 ## Quick Start (Recommended)
 
-![Quickstart Demo](docs/quickstart.gif)
+![Quickstart Demo](docs/quickstart.png)
 
 ---
 
