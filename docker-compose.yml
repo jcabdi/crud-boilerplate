@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      target: backend
+    container_name: django-backend
+    working_dir: /app/backend
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend/react_interface/dist:/app/backend/django_folder/static
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=django_folder.settings
+    command: poetry run python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      target: frontend
+    container_name: react-frontend
+    working_dir: /app/frontend/react_interface
+    volumes:
+      - ./frontend/react_interface:/app/frontend/react_interface
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host 0.0.0.0
